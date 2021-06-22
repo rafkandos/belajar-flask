@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        {%  for data in hari %}
+        <li>{{ data }}</li>
+        {% endfor %}
+    </div>
+    <div>
+        <p>Jika ujian saya {{ ujian }}</p>
+        {% if ujian == "lulus" %}
+        <p>Saya senang</p>
+        {% else %}
+        <p>Saya sedih</p>
+        {% endif %}
+    </div>
+    <div>
+        {% set holiday = "Tahun Baru" %}
+        <p>{{ holiday }}</p>
+    </div>
+    <div>==============================</div>
+    <div>
+        {%  for data in hari %}
+        {% if data == "minggu" %}
+        <p>Maka saya akan libur</p>
+        {% elif data == "senin" %}
+        <p>Maka saya akan bekerja</p>
+        {% endif %} {% endfor %}
+    </div>
+</body>
+
+</html>
